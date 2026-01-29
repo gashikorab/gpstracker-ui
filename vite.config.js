@@ -26,8 +26,8 @@ export default defineConfig(() => ({
         globPatterns: ['**/*.{js,css,html,woff,woff2,mp3}'],
       },
       manifest: {
-        short_name: '${title}',
-        name: '${description}',
+        short_name: 'GPS TRACKER',
+        name: 'GPS TRACKER',
         theme_color: '${colorPrimary}',
         icons: [
           {

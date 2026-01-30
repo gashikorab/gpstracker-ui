@@ -174,7 +174,7 @@ const LoginPage = () => {
         )}
       </div>
       <div className={classes.container}>
-        {useMediaQuery(theme.breakpoints.down('lg')) && <LogoImage color={theme.palette.primary.main} />}
+        {useMediaQuery(theme.breakpoints.down('lg')) && <LogoImage height={64} />}
         {!openIdForced && (
           <>
             <TextField

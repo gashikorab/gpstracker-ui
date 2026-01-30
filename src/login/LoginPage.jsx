@@ -21,6 +21,7 @@ import {
 import { useCatch } from '../reactHelper';
 import QrCodeDialog from '../common/components/QrCodeDialog';
 import fetchOrThrow from '../common/util/fetchOrThrow';
+import './LoginPage.css';
 
 const useStyles = makeStyles()((theme) => ({
   options: {
@@ -137,7 +138,7 @@ const LoginPage = () => {
   }, []);
 
   return (
-    <LoginLayout>
+    <LoginLayout className="loginLight">
       <div className={classes.options}>
         {nativeEnvironment && changeEnabled && (
           <IconButton color="primary" onClick={() => navigate('/change-server')}>
@@ -170,7 +171,7 @@ const LoginPage = () => {
           </FormControl>
         )}
       </div>
-      <div className={classes.container}>
+      <div className={`${classes.container} loginFormContent`}>
         {!openIdForced && (
           <>
             <TextField
@@ -183,6 +184,7 @@ const LoginPage = () => {
               autoFocus={!email}
               onChange={(e) => setEmail(e.target.value)}
               helperText={failed && 'Invalid username or password'}
+              variant="outlined"
             />
             <TextField
               required
@@ -194,6 +196,7 @@ const LoginPage = () => {
               autoComplete="current-password"
               autoFocus={!!email}
               onChange={(e) => setPassword(e.target.value)}
+              variant="outlined"
               slotProps={{
                 input: {
                   endAdornment: (
@@ -219,14 +222,17 @@ const LoginPage = () => {
                 value={code}
                 type="number"
                 onChange={(e) => setCode(e.target.value)}
+                variant="outlined"
               />
             )}
             <Button
               onClick={handlePasswordLogin}
               type="submit"
               variant="contained"
-              color="secondary"
+              color="primary"
               disabled={!email || !password || (codeEnabled && !code)}
+              className="loginPrimaryButton"
+              size="large"
             >
               {t('loginLogin')}
             </Button>
@@ -242,7 +248,7 @@ const LoginPage = () => {
           </Button>
         )}
         {!openIdForced && (
-          <div className={classes.extraContainer}>
+          <div className={`${classes.extraContainer} loginExtras`}>
             {registrationEnabled && (
               <Link
                 onClick={() => navigate('/register')}

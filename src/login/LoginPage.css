@@ -1,0 +1,91 @@
+.loginLight {
+  background-color: #f5f7fa;
+  background-image: none;
+}
+
+.loginLight .loginCard {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+}
+
+.loginLight .loginLogo {
+  margin-top: 48px;
+  margin-bottom: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.loginLight .loginForm {
+  padding: 32px 48px 48px;
+}
+
+.loginLight .loginFormContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #111111;
+}
+
+.loginLight .loginFormContent .MuiOutlinedInput-root {
+  background-color: #ffffff;
+}
+
+.loginLight .loginFormContent .MuiOutlinedInput-notchedOutline {
+  border-color: #d6dde8;
+}
+
+.loginLight .loginFormContent .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #b9c6d6;
+}
+
+.loginLight .loginFormContent .MuiOutlinedInput-root.Mui-focused {
+  box-shadow: 0 0 0 3px rgba(47, 124, 246, 0.18);
+}
+
+.loginLight .loginFormContent .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #2f7cf6;
+}
+
+.loginLight .loginFormContent .MuiInputLabel-root {
+  color: #334155;
+}
+
+.loginLight .loginFormContent .MuiInputLabel-root.Mui-focused {
+  color: #2f7cf6;
+}
+
+.loginLight .loginFormContent .MuiInputBase-input {
+  color: #111111;
+}
+
+.loginLight .loginFormContent .MuiIconButton-root {
+  color: #475569;
+}
+
+.loginLight .loginFormContent .MuiButton-contained {
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-weight: 600;
+}
+
+.loginLight .loginFormContent .loginPrimaryButton {
+  background-color: #2f7cf6;
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(47, 124, 246, 0.2);
+}
+
+.loginLight .loginFormContent .loginPrimaryButton:hover {
+  background-color: #2566cc;
+}
+
+.loginLight .loginFormContent .MuiButton-contained.Mui-disabled {
+  background-color: #c8d6f6;
+  color: #f8fafc;
+  box-shadow: none;
+}
+
+.loginLight .loginExtras {
+  margin-top: 0;
+}

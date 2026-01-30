@@ -30,15 +30,16 @@ const useStyles = makeStyles()((theme) => ({
   },
 }));
 
-const LoginLayout = ({ children }) => {
+const LoginLayout = ({ children, className }) => {
   const { classes } = useStyles();
+  const rootClassName = className ? `${classes.root} ${className}` : classes.root;
   return (
-    <main className={classes.root}>
-      <Paper className={classes.paper}>
-        <div className={classes.logo}>
+    <main className={rootClassName}>
+      <Paper className={`${classes.paper} loginCard`}>
+        <div className={`${classes.logo} loginLogo`}>
           <LogoImage height={64} />
         </div>
-        <form className={classes.form}>
+        <form className={`${classes.form} loginForm`}>
           {children}
         </form>
       </Paper>

@@ -8,7 +8,7 @@ export default (server, darkMode, direction) => useMemo(() => createTheme({
   typography: {
     fontFamily: 'Roboto,Segoe UI,Helvetica Neue,Arial,sans-serif',
   },
-  palette: palette(server, darkMode),
+  palette: palette(server),
   direction,
   dimensions,
   components,

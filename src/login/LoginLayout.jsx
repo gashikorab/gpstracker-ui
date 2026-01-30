@@ -1,55 +1,43 @@
-import { useMediaQuery, Paper } from '@mui/material';
+import { Paper } from '@mui/material';
 import { makeStyles } from 'tss-react/mui';
-import { useTheme } from '@mui/material/styles';
 import LogoImage from './LogoImage';
 
 const useStyles = makeStyles()((theme) => ({
   root: {
     display: 'flex',
-    height: '100%',
-  },
-  sidebar: {
-    display: 'flex',
-    justifyContent: 'center',
+    minHeight: '100vh',
     alignItems: 'center',
-    background: theme.palette.primary.main,
-    paddingBottom: theme.spacing(5),
-    width: theme.dimensions.sidebarWidth,
-    [theme.breakpoints.down('lg')]: {
-      width: theme.dimensions.sidebarWidthTablet,
-    },
-    [theme.breakpoints.down('sm')]: {
-      width: '0px',
-    },
+    justifyContent: 'center',
+    padding: theme.spacing(2),
   },
   paper: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    flex: 1,
+    width: '100%',
+    maxWidth: theme.spacing(72),
     boxShadow: '-2px 0px 16px rgba(0, 0, 0, 0.25)',
-    [theme.breakpoints.up('lg')]: {
-      padding: theme.spacing(0, 25, 0, 0),
-    },
   },
   form: {
     maxWidth: theme.spacing(52),
     padding: theme.spacing(5),
     width: '100%',
   },
+  logo: {
+    marginTop: theme.spacing(5),
+    marginBottom: theme.spacing(2),
+  },
 }));
 
 const LoginLayout = ({ children }) => {
   const { classes } = useStyles();
-  const theme = useTheme();
-
   return (
     <main className={classes.root}>
-      <div className={classes.sidebar}>
-        {!useMediaQuery(theme.breakpoints.down('lg')) && <LogoImage height={64} />}
-      </div>
       <Paper className={classes.paper}>
+        <div className={classes.logo}>
+          <LogoImage height={64} />
+        </div>
         <form className={classes.form}>
           {children}
         </form>

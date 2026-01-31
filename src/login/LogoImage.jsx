@@ -10,13 +10,13 @@ const useStyles = makeStyles()((theme, { height }) => ({
   },
 }));
 
-const LogoImage = ({ height = 32 }) => {
+const LogoImage = ({ height = 48 }) => {
   const { classes } = useStyles({ height });
 
   return (
     <img
       className={classes.image}
-      src="/logo.png"
+      src="/logo.svg"
       alt="GPS TRACKER"
     />
   );

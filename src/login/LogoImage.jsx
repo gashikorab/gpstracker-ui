@@ -10,7 +10,7 @@ const useStyles = makeStyles()((theme, { height }) => ({
   },
 }));
 
-const LogoImage = ({ height = 48 }) => {
+const LogoImage = ({ height = 96 }) => {
   const { classes } = useStyles({ height });
 
   return (
